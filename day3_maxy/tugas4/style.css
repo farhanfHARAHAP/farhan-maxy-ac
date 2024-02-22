@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(0, 0, 0);
+    background-image: url(assets/BG.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    padding-left: 5pt;
+}
+
+.logo {
+    max-width: 15rem;
+}
+
+.tag {
+    padding-right: 15pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+    color: white;
+    font-size: large;
+}
+
+.carousel {
+    background-color: black;
+    padding: 10pt;
+    text-align: center;
+    height: 300px;
+    width: auto;
+}
+
+.carousel iframe {
+    height: 100%;
+    width: 50%;
+}
+
+.summary {
+    backdrop-filter: blur(20px);
+    width: auto;
+    align-content: center;
+}
+
+.summary .text{
+    text-align: justify;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5pt;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+.summary img{
+    max-width: 50pt;
+}
+
+.summary .date {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: medium;
+    width: auto;
+    height: auto;
+    padding: 20pt;
+}

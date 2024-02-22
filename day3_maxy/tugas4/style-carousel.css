@@ -1,0 +1,8 @@
+.carousel-img tr td{
+    max-height: 250px;
+    padding: 5pt;
+}
+
+.carousel-img tr td img{
+    max-height: 250px;
+}
