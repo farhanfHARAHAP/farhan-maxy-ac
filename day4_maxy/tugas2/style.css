@@ -1,0 +1,62 @@
+.white-block {
+    width: 10%;
+    height: 20pt;
+    background-color: white;
+    margin: 0;
+}
+
+.red-block {
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line {
+    height: 20pt;
+    width: auto;
+    background-color: blue;
+}
+
+.mid-white {
+    height: 20pt;
+    width: 45%;
+    background-color: white;
+}
+
+.mid-red {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+    width: 100%;
+    background-color: red;
+}
+
+.center-red{
+    height: 20pt;
+    width: 10%;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.sticky-center {
+    display: block;
+    position: sticky;    
+}
+
+body {
+    background-color: black;
+}
+
+footer {
+    background-color: black;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    padding-left: 10pt;
+}
