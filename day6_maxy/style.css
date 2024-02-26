@@ -1,0 +1,21 @@
+body {
+    background-color: beige;
+}
+
+.navbar-brand {
+    width: 15%;
+}
+
+.navbar {
+    background-color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    background-color: maroon;
+    color: white;
+}

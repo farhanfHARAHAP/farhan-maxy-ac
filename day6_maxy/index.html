@@ -1,0 +1,256 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Vivere Pericoloso | Pemesanan dan Pembayaran</title>
+</head>
+
+<body>
+    <!--JS Script-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!--Header-->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <img src="assets/logo.jpg" class="navbar-brand">    
+        </div>        
+    </nav>
+
+    <!--Title-->
+    <div class="container mt-5 text-center title">
+        <h1>Pesan, Bayar, dan Kirim!</h1>
+    </div>
+
+    <!--Cart-->
+    <div class="container mt-5">
+        <h3>Keranjang</h3>
+        <div class="container d-flex flex-row">
+            <div class="container card my-1 p-2">
+                <!--Table Head-->
+                <div class="row my-1">
+                    <div class="col">
+                        <h5></h5>
+                    </div>
+                    <div class="col">
+                        <h5>Nama Barang</h5>
+                    </div>
+                    <div class="col">
+                        <h5>Kuantitas</h5>
+                    </div>
+                    <div class="col">
+                        <h5>Harga</h5>
+                    </div>
+                </div>
+                <!--Product-->
+                <div class="row my-1">
+                    <div class="col my-auto">
+                        <img src="assets/peci.jpg" alt="" width="100" height="100">
+                    </div>
+                    <div class="col my-auto">
+                        <p>Peci</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>1 x</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>Rp. 25,000</p>
+                    </div>
+                </div>
+                <!--Product-->
+                <div class="row my-1">
+                    <div class="col my-auto">
+                        <img src="assets/bomber.jpg" alt="" width="100" height="100">
+                    </div>
+                    <div class="col my-auto">
+                        <p>Bomber</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>1 x</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>Rp. 150,000</p>
+                    </div>
+                </div>
+                <!--Product-->
+                <div class="row my-1">
+                    <div class="col my-auto">
+                        <img src="assets/boots.jpg" alt="" width="100" height="100">
+                    </div>
+                    <div class="col my-auto">
+                        <p>Boots</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>1 x</p>
+                    </div>
+                    <div class="col my-auto">
+                        <p>Rp. 350,000</p>
+                    </div>
+                </div>
+                <hr>
+                <!--Total-->
+                <div class="row my-1">
+                    <div class="col my-auto">                    
+                    </div>
+                    <div class="col my-auto">                    
+                    </div>
+                    <div class="col my-auto">
+                        <h5>Total</h5>
+                    </div>
+                    <div class="col my-auto">
+                        <h5>Rp. 525,000</h5>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <form action="thankyou.html">
+
+        <!--Payment-->
+        <div class="container mt-5">
+            <h3>Pembayaran</h3>
+            <div class="container d-flex flex-row">
+                <div class="card p-2">      
+                    <!--Payment logo-->              
+                    <div class="row my-1">                        
+                        <div class="col">
+                            <img src="https://i.pinimg.com/originals/f5/8c/a3/f58ca3528b238877e9855fcac1daa328.jpg" alt="" width="100" height="100">                                       
+                        </div>
+                        <div class="col">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNxOBzJ2MEGS9yD-6FFy24sIKWJU6H2L0BI1FR52EqQ&s" alt="" width="100" height="100">                                       
+                        </div>
+                        <div class="col">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqssL_GW4hKuf5J6JD4ruhemLp4oW7hN0NkYgOdueRxw&s" alt="" width="100" height="100">                                       
+                        </div>
+                    </div>
+                    <!--Payment radio-->              
+                    <div class="row my-1">                        
+                        <div class="col">
+                            <input type="radio" name="" id=""> Dana
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="" id=""> Shopee Pay
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="" id="" width="50" height="50"> GoPay
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Courier-->
+        <div class="container mt-5">
+            <h3>Kurir</h3>
+            <div class="container d-flex flex-row">
+                <div class="card p-2">      
+                    <!--Courier logo-->              
+                    <div class="row my-1">                        
+                        <div class="col">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBjjVoQjE6PBnqWfMiEYchxydR15l3raQs7dAQVWU1Q&s" alt="" width="100" height="100">                                       
+                        </div>
+                        <div class="col">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Logo_J%26T_Merah_Square.jpg" alt="" width="100" height="100">                                       
+                        </div>
+                        <div class="col">
+                            <img src="https://i0.wp.com/thidiweb.com/wp-content/uploads/2019/06/fase-perkembangan-sejarah-pos-indonesia.jpg?resize=700%2C393&ssl=1" alt="" width="100" height="70">                                       
+                        </div>
+                    </div>
+                    <!--Courier radio-->              
+                    <div class="row my-1">                        
+                        <div class="col">
+                            <input type="radio" name="" id=""> JNE
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="" id=""> JNT
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="" id="" width="50" height="50"> Pos Indonesia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Address-->
+        <div class="container mt-5">
+            <h3>Alamat</h3>
+            <div class="container d-flex flex-row">
+                <div class="container-flex card p-2">
+                    <div class="row my-1">                    
+                        <div class="col">
+                            <h5>Nama Depan</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="col">
+                            <h5>Nama Belakang</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row my-1">                                            
+                        <div class="col">
+                            <h5>Provinsi</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>     
+                        <div class="col">
+                            <h5>Kab / Kota</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>                                           
+                    </div>
+                    <div class="row my-1">                                            
+                        <div class="col">
+                            <h5>Kecamatan</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>     
+                        <div class="col">
+                            <h5>Kelurahan</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>                                           
+                    </div>
+                    <div class="row my-1">
+                        <div class="col">
+                            <h5>Kode Pos</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div> 
+                        <div class="col">
+                            <h5>Nama Jalan</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div> 
+                    </div>
+                    <div class="row my-1">                                               
+                        <div class="col">
+                            <h5>RW</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>           
+                        <div class="col">
+                            <h5>RT</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>   
+                        <div class="col">
+                            <h5>No. Rumah</h5>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>           
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <!--Konfirmasi-->
+        <div class="container mt-5 text-center mx-auto">
+            <h2 class="title">Satu klik tombol dan pesananmu akan dikirim!</h2>
+            <input type="submit" value="Pesan" class="btn btn-lg btn-secondary mt-2">
+        </div>
+
+    </form>
+
+    <br><br><br>
+
+    <!--Footer-->
+    <footer>
+        <div class="container-flex d-flex flex-row p-2">
+            <p class="m-1">@ 2024 |</p>
+            <p class="m-1">Farhan Fadillah Harahap</p>
+        </div>
+    </footer>
+
+</body>
