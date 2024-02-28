@@ -1,0 +1,72 @@
+<head>
+    <!--Style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Time to Rob a Bank! | Alarm</title>
+</head>
+
+<body class="black">
+    <!--Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <!--Header-->
+    <nav>
+        <div class="nav-wrapper pink">
+            <a href="index.html" class="brand-logo center">Ciao Alarm</a>            
+        </div>
+    </nav>
+    <br>
+    <!--Clock-->
+    <div class="container white center">
+        <h2 id="clock">0:0:0</h2>
+    </div>
+    <br>
+    <!--Indicators-->
+    <div class="container">
+        <div class="row">
+            <div class="col"><img id="ind-mask" src="assets/mask-off.png" alt="" width="50" height="50"></div>
+            <div class="col"><img id="ind-gun" src="assets/gun-off.png" alt="" width="50" height="50"></div>
+            <div class="col" id="ind-light" style="background-color: red; margin-left: 5pt;">
+                <h5 id="ind-text" style="color: black;">At Ease</h5>
+            </div>
+        </div>        
+    </div>
+    <!--Set Alarm-->
+    <div class="container red">
+        <div class="row">
+            <div class="col s3 center"><h5>Hour</h5></div>
+            <div class="col s6 center"><input id="Hour" type="text" class="white" style="margin: 2pt;"></div>
+        </div>
+        <div class="row">
+            <div class="col s3 center"><h5>Minute</h5></div>
+            <div class="col s6 center"><input id="Minute" type="text" class="white" style="margin: 2pt;"></div>
+        </div>
+        <div class="row">
+            <div class="col s3 center"><h5>Second</h5></div>
+            <div class="col s6 center"><input id="Second" type="text" class="white" style="margin: 2pt;"></div>
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                <button id="start-btn" class="waves-effect waves-light btn black" style="margin-bottom: 10pt;" onclick="setAlarm()">
+                    Set Alarm
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="song">
+        <source src="assets/song.mp3" type="audio/mpeg">;
+    </audio>
+
+    <audio id="mask-sound">
+        <source src="assets/mask.mp3" type="audio/mpeg">;
+    </audio>
+
+    <audio id="gun-sound">
+        <source src="assets/cocking.mp3" type="audio/mpeg">;
+    </audio>
+
+    <footer>
+        <p style="color: white; margin-top: 20pt;" class="center">@ 2024 | Farhan Fadillah Harahap</p>
+    </footer>
+
+</body>

@@ -1,0 +1,71 @@
+<head>
+    <title>Date</title>
+    <!--Style-->
+    <style>
+        body{
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        div.container{
+            margin: 2rem;            
+        }
+
+        div.top {
+            background-color: maroon;
+            color: white;
+            text-align: center;
+        }
+
+        div.content {
+            background-color: black;
+            color: white;
+            text-align: justify;        
+            padding: 10pt;
+        }
+
+        button {
+            background-color: whitesmoke;
+            font-size: large;
+            padding: 5pt;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--Script-->
+    <script src="date-script.js"></script>
+
+    <!--Shows Date-->
+    <div class="container">
+        <div class="top">
+            <h2>DATE UPDATER</h2>
+        </div>
+        <div class="content">
+            <p>If you click this button, it will shows you the date!</p>
+            <br>
+            <h4 id="date">DATE</h4>
+            <br>
+            <button onclick="upDate()" onpointerenter="btnPointerOn(this)" onpointerleave="btnPointerOff(this)">
+                Shows Date
+            </button>
+        </div>
+    </div>
+
+    <!--Go to slider-->
+    <div class="container">
+        <div class="top">
+            <h2>DATE UPDATER</h2>
+        </div>
+        <div class="content">
+            <p>If you click this button, it will go to slider.html page!</p>            
+            <br>
+            <button onclick="openSlider()" onpointerenter="btnPointerOn(this)" onpointerleave="btnPointerOff(this)">
+                Go to Slider
+            </button>
+        </div>
+    </div>
+
+</body>
