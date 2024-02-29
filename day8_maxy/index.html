@@ -1,0 +1,143 @@
+<head>
+    <!--Title-->
+    <title>ChartJS | Farhan Harahap</title>
+    <!--Style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Script-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Main-->
+    <div class="container-fluid p-2">
+        <!--Simple Header-->
+        <h1>ChartJS | Farhan Harahap</h1>
+        <hr>
+        <br>
+        <!--First ChartJS-->
+        <div class="container-fluid p-2">
+            <div class="container">
+                <h2 style="color: maroon;">Latihan 1</h2>
+                <ul>
+                    <li>Buatlah sebuah chart line dengan data [1, 2, 3, 4, 5].</li>
+                    <li>Ubah warna chart menjadi merah.</li>
+                </ul>
+                <div class="p-5">
+                    <canvas id="Chart1"></canvas>
+                </div>
+                <!--Chart-->
+                <script>
+                    const c1 = document.getElementById('Chart1');
+                  
+                    new Chart(c1, {
+                      type: 'line',
+                      data: {
+                        labels: ['1', '2', '3', '4', '5'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [12, 19, 3, 5, 2],
+                          borderWidth: 1,
+                          backgroundColor: '#FF0000',
+                          borderColor:'#ffbaba'    
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+            </div>      
+        </div>
+        <br>
+        <!--Second ChartJS-->
+         <div class="container-fluid p-2">
+            <div class="container">
+                <h2 style="color: maroon;">Latihan 2</h2>
+                <ul>
+                    <li>Buatlah sebuah chart line dengan data [1, 2, 3, 4, 5].</li>
+                    <li>Tambahkan data point baru dengan nilai 6.</li>
+                </ul>
+                <div class="p-5">
+                    <canvas id="Chart2"></canvas>
+                </div>
+                <!--Chart-->
+                <script>
+                    const c2 = document.getElementById('Chart2');
+                  
+                    new Chart(c2, {
+                      type: 'line',
+                      data: {
+                        labels: ['1', '2', '3', '4', '5','6'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [12, 19, 3, 5, 2, 4],
+                          borderWidth: 1,
+                          backgroundColor: '#FF0000',
+                          borderColor:'#ffbaba'    
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+            </div>      
+        </div>
+        <br>
+        <!--Third ChartJS-->
+        <div class="container-fluid p-2">
+            <div class="container">
+                <h2 style="color: maroon;">Latihan 3</h2>
+                <ul>
+                    <li>Buatlah sebuah chart line dengan data [1, 2, 3, 4, 5].</li>
+                    <li>Tambahkan event listener untuk event mouse hover. Ketika event mouse hover terjadi, cetak data index dari data point yang dihover.</li>
+                </ul>
+                <div class="p-5">
+                    <canvas id="Chart3"></canvas>
+                </div>
+                <!--Chart-->
+                <script>
+                    const c3 = document.getElementById('Chart3');
+                  
+                    new Chart(c3, {
+                      type: 'line',
+                      data: {
+                        labels: ['1', '2', '3', '4', '5','6'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [12, 19, 3, 5, 2, 4],
+                          borderWidth: 1,
+                          backgroundColor: '#FF0000',
+                          borderColor:'#ffbaba'    
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+            </div>                  
+        </div>
+        <br><br>
+        <hr>
+        <div class="container-fluid p-3">
+            <p>@ 2024 | Farhan Fadillah Harahap</p>
+        </div>
+    </div>
+    
+</body>
