@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">        
+        <!--Leaflet-->
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        />
+        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="map-style.css" />
+        <!--Title-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Us | </title>
+    </head>
+    <body style="background-color: beige;">
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" 
+        crossorigin="anonymous"></script>
+        <!--Navbar-->
+        <nav class="navbar" style="background-color: black;">
+            <div class="container-fluid">
+                <img src="assets/logo.jpg" class="navbar-brand" width="100" height="50">    
+            </div>        
+        </nav>
+        <!--Body-->
+        <div class="container-fluid">
+            <!--Title-->
+            <br>
+            <h1>Contact Us</h1>
+            <hr>
+            <!--Form-->
+            <form>
+            <div class="container-flex" style="max-width: 70%;">
+                <div class="form-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" name="fullname" id="fullname" class="form-control">          
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Whatsapp</label>
+                    <input type="text" name="whatsapp" id="whatsapp" class="form-control">          
+                </div>
+                <div class="form-group">
+                    <label for="province">Kota</label>
+                    <select name="province" id="province" class="form-select">                        
+                        <option value="0">--Pilih Provinsi--</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Jawa Barat">Jawa Barat</option>                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">Kota / Kabupaten</label>
+                    <select name="city" id="city" class="form-select">  
+                        <option value="0">--Pilih Kota--</option> 
+                    </select>
+                    <!--Option based on Province-->
+                    <script>
+                        $('#province').on('change', function(){
+                            if(this.value == '0'){
+                                var $el = $("#city");
+                                var newOptions = {
+                                    "--Pilih Kota--":0
+                                };                            
+                                $el.empty(); // remove old options
+                                $.each(newOptions, function(key,value) {
+                                $el.append($("<option></option>")
+                                    .attr("value", value).text(key));
+                                });
+                            }
+                            if(this.value == 'Jakarta'){
+                                var $el = $("#city");
+                                var newOptions = {
+                                    "--Pilih Kota--":0,
+                                    "Jakarta Pusat": "Jakarta Pusat",
+                                    "Jakarta Selatan": "Jakarta Selatan",
+                                    "Jakarta Utara": "Jakarta Utara",
+                                    "Jakarta Timur": "Jakarta Timur",
+                                    "Kepulauan Seribu": "Kepulauan Seribu"
+                                };                            
+                                $el.empty(); // remove old options
+                                $.each(newOptions, function(key,value) {
+                                $el.append($("<option></option>")
+                                    .attr("value", value).text(key));
+                                });
+                            }
+                            if(this.value == 'Jawa Barat'){
+                                var $el = $("#city");
+                                var newOptions = {
+                                    "--Pilih Kota--":0,
+                                    "Bandung": "Bandung",
+                                    "Bogor": "Bogor",
+                                    "Kab. Bogor": "Kab. Bogor"
+                                };                            
+                                $el.empty(); // remove old options
+                                $.each(newOptions, function(key,value) {
+                                $el.append($("<option></option>")
+                                    .attr("value", value).text(key));
+                                });
+                            }
+                        })
+                    </script>
+                </div>        
+                <br>
+                <!--Map-->  
+                <div class="container" style="height: 300px;" id="map-container">                    
+                    <!--Map Selector-->                    
+                    <script>
+                        function buildMap(lat,lon)  {                 
+                            $('map-container').empty();
+                            $('#map-container').html('<div id="map"></div>');                            
+                            var map = L.map('map');
+
+                            // Set the initial view coordinates (latitude, longitude) and zoom level
+                            map.setView([lat, lon], 13);
+
+                            // Add a tile layer to the map
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                                maxZoom: 18,
+                            }).addTo(map);    
+                        }      
+                        
+                        $('document').ready(
+                           buildMap(-6.1822261,106.7951788)
+                        )
+
+                        $('#city').on('change',function(){  
+                            $('#submit').prop('disabled', false);
+                            var coor_city = {
+                                "Jakarta Pusat": [-6.1822261,106.7951788],
+                                "Jakarta Selatan": [-6.2839294,106.7195052],
+                                "Jakarta Utara": [-6.1355193,106.6767418],
+                                "Jakarta Timur": [-6.260971,106.8224459],
+                                "Kepulauan Seribu": [-5.6114642,106.2866371],
+                                "Bandung": [-6.9032719,107.5605834],
+                                "Bogor": [-6.5950162,106.7093178],
+                                "Kab. Bogor": [-6.5426173,105.6325076]
+                            }    
+                            var coor = coor_city[this.value];  
+                            if(coor != 0){                                
+                                buildMap(coor[0], coor[1]);
+                            } else {
+
+                            }                                                                        
+                        })
+                    </script>                     
+                </div>    
+                <br>
+                <!--Submit-->                   
+                <input type="submit" value="Kirimkan!" class="btn btn-large btn-primary" id='submit' disabled>
+                <script>
+                    $('#submit').on('click',function(){
+                        var fullname = $('#fullname').val();
+                        var whatsapp = $('#whatsapp').val();
+                        var city = $('#city').val();
+                        var province = $('#province').val();
+                        var link_wa = 'https://api.whatsapp.com/send?phone=6285156206918&text=Saya%20'+fullname+'%20('+whatsapp+')%20dari%20'+city+'%2C%20'+province+'%20telah%20membuka%20repository%20Github%20Anda!';
+                        window.open(link_wa,'_blank')
+                    })
+                </script>                  
+            </div>                
+            </form>
+        </div>
+        <!--Footer-->
+        <br><br><br><br>            
+        <div class="container-fluid" style="background-color: black; padding: 2pt;">
+            <p style="color: white;">@ 2024 | Farhan Fadillah Harahap</p>
+        </div>
+        
+    </body>
+</html>
