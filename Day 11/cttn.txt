@@ -1,0 +1,23 @@
+soal no 2
+misal total cust 3 
+maka jawaban 
+cust1 4x
+cust2  3x
+cust3 0x
+
+soal no 3
+misal total cust 3 
+maka jawaban 
+adi 400k
+ari  300k
+ani 0k
+
+soal no 4
+min 0k
+max 400k
+rata2 700k/7
+
+soal no 4
+rumus saja min, max, avg
+
+kumpulkan query sqlnya
