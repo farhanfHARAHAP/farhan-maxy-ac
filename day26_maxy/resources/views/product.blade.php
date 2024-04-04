@@ -1,10 +1,9 @@
 @extends('master2')
 
-@section('page_title','Product Menu')
-
 @section('content')
 @if (isset($mode))
     @if ($mode == 'edit')
+    @section('page_title','Edit Product')
     <div style="max-width: 500px">
         <form action="/edit/go" method="post">
             @csrf
@@ -36,6 +35,7 @@
     </div>
     @endif
     @if ($mode == 'show')
+    @section('page_title','Show Products')
     <div>
         <h2><b>Products Registered</b></h2>
           @if (isset($success))
@@ -78,6 +78,7 @@
       </div>
     @endif
     @if ($mode =='add')
+    @section('page_title','Add Product')
     <div style="max-width: 500px">
         <form action="/add/go" method="post">
             @csrf
@@ -105,6 +106,7 @@
     @endif
 @else
     <div>
+        @section('page_title','Product Menu')
         {{-- Title --}}
         <h2><b>Product</b></h2><hr>
         {{-- Menus --}}
